@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'description_place.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -31,7 +33,41 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Trips'),
+        ),
+        body: const DescriptionPlace(),
+      ),
+
+      //  Scaffold(
+      //   appBar: AppBar(
+      //     title: const Text('Hola Danniel!'), // barra superior
+      //   ),
+      //   body: const Center(
+      //     child: Text(
+      //       // propiedad de center
+      //       'Hello, World!',
+      //       style: TextStyle(fontSize: 24),
+      //     ),
+      //   ),
+      //   bottomNavigationBar: BottomAppBar(
+      //     child: Container(
+      //       height: 50.0,
+      //       color: Theme.of(context).colorScheme.primary,
+      //       child: const Center(
+      //         child: Text('BottomAppBar'),
+      //       ),
+      //     ),
+      //   ),
+      //   floatingActionButton: FloatingActionButton(
+      //     onPressed: () {},
+      //     tooltip: 'Increment',
+      //     child: const Icon(Icons.add),
+      //   ),
+      //   floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      //   floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
+      // ),
     );
   }
 }
