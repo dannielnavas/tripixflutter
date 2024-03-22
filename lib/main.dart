@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Trips'),
         ),
-        body: const DescriptionPlace(),
+        body: DescriptionPlace('Bahamas', 4, 'Lorem ipsum dolor sit amet'),
       ),
 
       //  Scaffold(
