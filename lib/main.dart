@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'description_place.dart';
+import 'package:tripix/description_place.dart';
+import 'package:tripix/gradiant_back.dart';
+import 'package:tripix/review_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +13,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    const String descriptionDommy =
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.';
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -34,10 +37,22 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Trips'),
+        // appBar: AppBar(
+        //   title: const Text('Trips'),
+        // ),
+        body: Stack(
+          children: <Widget>[
+            ListView(
+              children: const <Widget>[
+                DescriptionPlace('Bahamas', 4, descriptionDommy),
+                ReviewList(),
+              ],
+            ),
+            const RadiantBack(),
+          ],
         ),
-        body: DescriptionPlace('Bahamas', 4, 'Lorem ipsum dolor sit amet'),
+        // const DescriptionPlace('Bahamas', 4, 'Lorem ipsum dolor sit amet'),
+        // const ReviewList(),
       ),
 
       //  Scaffold(
