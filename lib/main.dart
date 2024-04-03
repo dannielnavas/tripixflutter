@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:tripix/description_place.dart';
 import 'package:tripix/gradiant_back.dart';
 import 'package:tripix/review_list.dart';
 
 void main() {
+  // vovler la barra de android transparente
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light));
   runApp(const MyApp());
 }
 
@@ -48,7 +53,7 @@ class MyApp extends StatelessWidget {
                 ReviewList(),
               ],
             ),
-            const RadiantBack(),
+            RadiantBack('Popular'),
           ],
         ),
         // const DescriptionPlace('Bahamas', 4, 'Lorem ipsum dolor sit amet'),
