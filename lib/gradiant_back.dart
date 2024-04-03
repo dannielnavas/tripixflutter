@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RadiantBack extends StatelessWidget {
-  const RadiantBack({super.key});
+  String title = 'Popular';
+  RadiantBack(this.title, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +19,15 @@ class RadiantBack extends StatelessWidget {
           stops: <double>[0.0, 0.6],
           tileMode: TileMode.clamp,
         ),
+      ),
+      alignment: const Alignment(-0.9, -0.6),
+      child: Text(
+        title,
+        style: const TextStyle(
+            color: Colors.white,
+            fontSize: 30.0,
+            fontFamily: 'Lato',
+            fontWeight: FontWeight.bold),
       ),
     );
   }
