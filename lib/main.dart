@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tripix/description_place.dart';
-import 'package:tripix/gradiant_back.dart';
+import 'package:tripix/header_app_bar.dart';
 import 'package:tripix/review_list.dart';
 
 void main() {
@@ -53,7 +53,8 @@ class MyApp extends StatelessWidget {
                 ReviewList(),
               ],
             ),
-            RadiantBack('Popular'),
+            // RadiantBack('Popular'),
+            HeaderAppBar()
           ],
         ),
         // const DescriptionPlace('Bahamas', 4, 'Lorem ipsum dolor sit amet'),
