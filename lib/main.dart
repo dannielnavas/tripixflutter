@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tripix/description_place.dart';
-import 'package:tripix/header_app_bar.dart';
-import 'package:tripix/review_list.dart';
+import 'package:tripix/danniel_trips.dart';
 
 void main() {
   // vovler la barra de android transparente
@@ -21,75 +19,57 @@ class MyApp extends StatelessWidget {
     const String descriptionDommy =
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.';
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: Scaffold(
-        // appBar: AppBar(
-        //   title: const Text('Trips'),
-        // ),
-        body: Stack(
-          children: <Widget>[
-            ListView(
-              children: const <Widget>[
-                DescriptionPlace('Bahamas', 4, descriptionDommy),
-                ReviewList(),
-              ],
-            ),
-            // RadiantBack('Popular'),
-            HeaderAppBar()
-          ],
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          // This is the theme of your application.
+          //
+          // TRY THIS: Try running your application with "flutter run". You'll see
+          // the application has a purple toolbar. Then, without quitting the app,
+          // try changing the seedColor in the colorScheme below to Colors.green
+          // and then invoke "hot reload" (save your changes or press the "hot
+          // reload" button in a Flutter-supported IDE, or press "r" if you used
+          // the command line to start the app).
+          //
+          // Notice that the counter didn't reset back to zero; the application
+          // state is not lost during the reload. To reset the state, use hot
+          // restart instead.
+          //
+          // This works for code too, not just values: Most code changes can be
+          // tested with just a hot reload.
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
         ),
-        // const DescriptionPlace('Bahamas', 4, 'Lorem ipsum dolor sit amet'),
-        // const ReviewList(),
-      ),
+        home: const DannielTrips()
 
-      //  Scaffold(
-      //   appBar: AppBar(
-      //     title: const Text('Hola Danniel!'), // barra superior
-      //   ),
-      //   body: const Center(
-      //     child: Text(
-      //       // propiedad de center
-      //       'Hello, World!',
-      //       style: TextStyle(fontSize: 24),
-      //     ),
-      //   ),
-      //   bottomNavigationBar: BottomAppBar(
-      //     child: Container(
-      //       height: 50.0,
-      //       color: Theme.of(context).colorScheme.primary,
-      //       child: const Center(
-      //         child: Text('BottomAppBar'),
-      //       ),
-      //     ),
-      //   ),
-      //   floatingActionButton: FloatingActionButton(
-      //     onPressed: () {},
-      //     tooltip: 'Increment',
-      //     child: const Icon(Icons.add),
-      //   ),
-      //   floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      //   floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
-      // ),
-    );
+        //  Scaffold(
+        //   appBar: AppBar(
+        //     title: const Text('Hola Danniel!'), // barra superior
+        //   ),
+        //   body: const Center(
+        //     child: Text(
+        //       // propiedad de center
+        //       'Hello, World!',
+        //       style: TextStyle(fontSize: 24),
+        //     ),
+        //   ),
+        //   bottomNavigationBar: BottomAppBar(
+        //     child: Container(
+        //       height: 50.0,
+        //       color: Theme.of(context).colorScheme.primary,
+        //       child: const Center(
+        //         child: Text('BottomAppBar'),
+        //       ),
+        //     ),
+        //   ),
+        //   floatingActionButton: FloatingActionButton(
+        //     onPressed: () {},
+        //     tooltip: 'Increment',
+        //     child: const Icon(Icons.add),
+        //   ),
+        //   floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        //   floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
+        // ),
+        );
   }
 }
 
