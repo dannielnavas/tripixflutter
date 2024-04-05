@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:tripix/floating_action_button_green.dart';
 
 class CardImage extends StatelessWidget {
   String pathImage = 'assets/img/beach.jpeg';
@@ -33,6 +34,9 @@ class CardImage extends StatelessWidget {
         ],
       ),
     );
-    return card;
+    return Stack(
+      alignment: const Alignment(0.9, 1.2),
+      children: [card, const FloatingActionButtonGreen()],
+    );
   }
 }
